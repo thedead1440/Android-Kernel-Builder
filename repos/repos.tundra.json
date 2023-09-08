@@ -1,7 +1,7 @@
 [
   {
     "kernelSource": {
-      "name": "tundra_kSU_Google",
+      "name": "tundra_ksu",
       "repo": "https://github.com/electimon/android_kernel_motorola_sm7325",
       "branch": "tmp-3",
       "device": "tundra",
@@ -10,37 +10,38 @@
     "withKernelSU": true,
     "toolchains": [
       {
-        "url": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+archive/refs/tags/android-12.1.0_r27.tar.gz",
+        "url": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/+archive/refs/tags/android-13.0.0_r0.111.tar.gz",
+        "name": "gcc-arm",
+        "binPath": ["bin"]
+      },
+      {
+        "url": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+archive/refs/tags/android-13.0.0_r0.111.tar.gz",
         "name": "gcc",
+        "binPath": ["bin"]
+      },
+      {
+        "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r498229b.tar.gz",
+        "name": "clang",
         "binPath": ["bin"]
       }
     ],
     "ccache": true,
     "params": {
       "ARCH": "arm64",
-      "CC": "clang/bin/clang",
+      "CC": "clang",
       "externalCommand": {
-        "CLANG_TRIPLE": "gcc/bin/aarch64-linux-android-",
         "CROSS_COMPILE": "gcc/bin/aarch64-linux-android-",
-        "CROSS_COMPILE_ARM32": "gcc/bin/arm-linux-androideabi-",
-        "LD": "clang/bin/ld.lld",
-        "AR": "clang/bin/llvm-ar",
-        "NM": "clang/bin/llvm-nm",
-        "OBJCOPY": "clang/bin/llvm-objcopy",
-        "OBJDUMP": "clang/bin/llvm-objdump",
-        "READELF": "clang/bin/llvm-readelf",
-        "OBJSIZE": "clang/bin/llvm-size",
-        "STRIP": "clang/bin/llvm-strip",
-        "LDGOLD": "clang/bin/aarch64-linux-gnu-ld.gold",
-        "LLVM_AR": "clang/bin/llvm-ar",
-        "LLVM_DIS": "clang/bin/llvm-dis"
+        "CROSS_COMPILE_ARM32": "gcc-arm/bin/arm-linux-androideabi-",
+        "CLANG_TRIPLE": "aarch64-linux-gnu",
+        "LLVM": "1",
+        "LLVM_IAS": "1"
       }
     },
     "AnyKernel3": {
       "use": false,
       "release": false,
-      "repo": "https://github.com/easterNday/AnyKernel3/",
-      "branch": "thyme"
+      "repo": "https://github.com/bibi09456/AnyKernel3/",
+      "branch": "ugglite"
     }
   }
 ]
