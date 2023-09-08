@@ -1,13 +1,13 @@
 [
   {
     "kernelSource": {
-      "name": "Wayne_KenrlSU_Google",
-      "repo": "https://github.com/Diva-Room/Miku_kernel_xiaomi_wayne",
-      "branch": "TDA",
-      "device": "wayne",
-      "defconfig": "vendor/wayne_defconfig"
+      "name": "Tundra_KernelSU",
+      "repo": "https://github.com/electimon/android_kernel_motorola_sm7325",
+      "branch": "tmp-3",
+      "device": "tundra",
+      "defconfig": "vendor/tundra_defconfig"
     },
-    "withKernelSU": false,
+    "withKernelSU": true,
     "toolchains": [
       {
         "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/master-kernel-build-2022/clang-r450784d.tar.gz",
